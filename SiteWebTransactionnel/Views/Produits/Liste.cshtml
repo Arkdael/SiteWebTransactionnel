@@ -1,0 +1,23 @@
+@model Produit[]
+
+<table>
+	<caption>Liste de produits</caption>
+	<thead>
+		<tr>
+			<td>id</td>
+			<td>nom</td>
+			<td>description</td>
+			<td>prix</td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(Produit produit in Model){
+		<tr>
+			<td>@produit.Id</td>
+			<td><a href="/Produits/Details/@produit.Id">@produit.Nom</a></td>
+			<td>@produit.Description</td>
+			<td>@produit.Prix</td>
+		</tr>
+		}
+	</tbody>
+</table>
