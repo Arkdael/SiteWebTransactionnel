@@ -2,9 +2,11 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace SiteWebTransactionnel.Models;
 
-public class ProduitCréer // Pourrait être une interface.
+public class CréerProduit // Pourrait être une interface.
 {
-	string nom = "";
-	public string description = "";
-	decimal Prix;
+	public required string Nom { get; set; }
+	public string Description { get; set; } = "";
+	public decimal Prix { get; set; }
+
+	public CréerProduit() {}
 }

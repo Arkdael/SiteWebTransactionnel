@@ -19,21 +19,28 @@ public class ProduitsService(BdContexte contexte)
 		return produits;
 	}
 
-	public Produit Créer()
+	public async Task<Produit> Créer(CréerProduit créerProduit)
 	{
-		throw new NotImplementedException();
+		Produit nouveauProduit = new(créerProduit);
+		_contexte.Produits.Add(nouveauProduit);
+		await _contexte.SaveChangesAsync();
+
+		return nouveauProduit;
 	}
 
-	public Produit Modifier()
+	public async Task<Produit> Modifier(Produit produit)
 	{
-		Produit produit = _contexte.Produits.Where(p => p.Id == -1).First() ?? throw new KeyNotFoundException();
-		throw new NotImplementedException();
+		_contexte.Produits.Update(produit);
+		await _contexte.SaveChangesAsync();
+
+		return produit;
 	}
 
-	public bool Supprimer(int id)
+	public async Task<bool> Supprimer(int id)
 	{
 		Produit produit = _contexte.Produits.Where(p => p.Id == id).Single() ?? throw new KeyNotFoundException();
 		_contexte.Produits.Remove(produit);
+		await _contexte.SaveChangesAsync();
 		return true;
 	}
 }

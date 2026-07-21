@@ -20,49 +20,61 @@ build_property.TargetFrameworkVersion = v10.0
 build_property.EntryPointFilePath = 
 build_property.RootNamespace = SiteWebTransactionnel
 build_property.RootNamespace = SiteWebTransactionnel
-build_property.ProjectDir = /home/felix/Projets/SiteWebTransactionnel2/
+build_property.ProjectDir = /home/felix/SiteWebTransactionnel/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/felix/Projets/SiteWebTransactionnel2
+build_property.MSBuildProjectDirectory = /home/felix/SiteWebTransactionnel
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[/home/felix/SiteWebTransactionnel/Pages/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[/home/felix/SiteWebTransactionnel/Pages/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Produits/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVpdHMvRGV0YWlscy5jc2h0bWw=
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Creer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvQ3JlZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Produits/Liste.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVpdHMvTGlzdGUuY3NodG1s
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Liste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvTGlzdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Modifier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvTW9kaWZpZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Supprimer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvU3VwcHJpbWVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[/home/felix/SiteWebTransactionnel/Pages/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/Projets/SiteWebTransactionnel2/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-6xoetq6c1k
+[/home/felix/SiteWebTransactionnel/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j7myzc875k

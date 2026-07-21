@@ -1,0 +1,47 @@
+@model Produit[]
+
+@{
+    ViewData["Title"] = "Liste";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a href="/Produits/Creer">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Prix)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var produit in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => produit.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => produit.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => produit.Prix)
+            </td>
+            <td>
+                <a href="./Modifier/@produit.Id">Edit</a> |
+                <a href="./Details/@produit.Id">Details</a> |
+                <a href="./Supprimer/@produit.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

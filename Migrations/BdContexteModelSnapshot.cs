@@ -21,6 +21,32 @@ namespace SiteWebTransactionnel.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("SiteWebTransactionnel.Models.Plateforme", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("JeuVidéoId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Manufacturier")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nom")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JeuVidéoId");
+
+                    b.ToTable("Plateforme");
+                });
+
             modelBuilder.Entity("SiteWebTransactionnel.Models.Produit", b =>
                 {
                     b.Property<int>("Id")
@@ -33,6 +59,11 @@ namespace SiteWebTransactionnel.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("character varying(8)");
+
                     b.Property<string>("Nom")
                         .IsRequired()
                         .HasColumnType("text");
@@ -43,6 +74,10 @@ namespace SiteWebTransactionnel.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Produits");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Produit");
+
+                    b.UseTphMappingStrategy();
 
                     b.HasData(
                         new
@@ -66,6 +101,35 @@ namespace SiteWebTransactionnel.Migrations
                             Nom = "Ipsum",
                             Prix = 30m
                         });
+                });
+
+            modelBuilder.Entity("SiteWebTransactionnel.Models.JeuVidéo", b =>
+                {
+                    b.HasBaseType("SiteWebTransactionnel.Models.Produit");
+
+                    b.Property<string>("Développeur")
+                        .HasColumnType("text");
+
+                    b.PrimitiveCollection<string[]>("Genres")
+                        .IsRequired()
+                        .HasColumnType("text[]");
+
+                    b.Property<string>("Éditeur")
+                        .HasColumnType("text");
+
+                    b.HasDiscriminator().HasValue("JeuVidéo");
+                });
+
+            modelBuilder.Entity("SiteWebTransactionnel.Models.Plateforme", b =>
+                {
+                    b.HasOne("SiteWebTransactionnel.Models.JeuVidéo", null)
+                        .WithMany("Plateformes")
+                        .HasForeignKey("JeuVidéoId");
+                });
+
+            modelBuilder.Entity("SiteWebTransactionnel.Models.JeuVidéo", b =>
+                {
+                    b.Navigation("Plateformes");
                 });
 #pragma warning restore 612, 618
         }

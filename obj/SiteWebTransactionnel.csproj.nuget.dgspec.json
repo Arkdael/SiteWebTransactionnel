@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/felix/Projets/SiteWebTransactionnel2/SiteWebTransactionnel.csproj": {}
+    "/home/felix/SiteWebTransactionnel/SiteWebTransactionnel.csproj": {}
   },
   "projects": {
-    "/home/felix/Projets/SiteWebTransactionnel2/SiteWebTransactionnel.csproj": {
+    "/home/felix/SiteWebTransactionnel/SiteWebTransactionnel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/felix/Projets/SiteWebTransactionnel2/SiteWebTransactionnel.csproj",
+        "projectUniqueName": "/home/felix/SiteWebTransactionnel/SiteWebTransactionnel.csproj",
         "projectName": "SiteWebTransactionnel",
-        "projectPath": "/home/felix/Projets/SiteWebTransactionnel2/SiteWebTransactionnel.csproj",
+        "projectPath": "/home/felix/SiteWebTransactionnel/SiteWebTransactionnel.csproj",
         "packagesPath": "/home/felix/.nuget/packages/",
-        "outputPath": "/home/felix/Projets/SiteWebTransactionnel2/obj/",
+        "outputPath": "/home/felix/SiteWebTransactionnel/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/felix/.nuget/NuGet/NuGet.Config"
@@ -60,6 +60,16 @@
               "target": "Package",
               "version": "[10.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[10.0.2, )"
@@ -88,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/felix/.dotnet/sdk/10.0.301/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

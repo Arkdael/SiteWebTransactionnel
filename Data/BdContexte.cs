@@ -12,4 +12,6 @@ public class BdContexte(DbContextOptions<BdContexte> options) : DbContext(option
 	}
 
 	public DbSet<Produit> Produits { get; set; }
+
+public DbSet<SiteWebTransactionnel.Models.JeuVidéo> JeuVidéo { get; set; } = default!;
 }

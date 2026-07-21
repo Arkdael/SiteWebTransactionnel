@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using SiteWebTransactionnel.Controllers;
 using SiteWebTransactionnel.Data;
@@ -9,6 +10,14 @@ builder.Services.AddDbContext<BdContexte>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ProduitsService>();
 builder.Services.AddControllersWithViews();
+// Spécifier dans quel fichiers les vues sont stockées.
+builder.Services.Configure<RazorViewEngineOptions>(o =>
+{
+	o.ViewLocationFormats.Clear();
+	o.ViewLocationFormats.Add("/Pages/{1}/{0}" + RazorViewEngine.ViewExtension);
+	o.ViewLocationFormats.Add("/Pages/Shared/{0}" + RazorViewEngine.ViewExtension);
+});
+
 
 var app = builder.Build();
 

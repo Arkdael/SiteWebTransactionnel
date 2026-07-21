@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
 namespace SiteWebTransactionnel.Models;
@@ -18,5 +19,13 @@ public class Produit
 		this.Nom = pNom;
 		this.Description = pDescription;
 		this.Prix = pPrix;
+	}
+
+	[SetsRequiredMembers]
+	public Produit(CréerProduit créerProduit)
+	{
+		this.Nom = créerProduit.Nom;
+		this.Description = créerProduit.Description;
+		this.Prix = créerProduit.Prix;
 	}
 }
