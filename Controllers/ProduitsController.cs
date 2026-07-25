@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using SiteWebTransactionnel.Models;
+using SiteWebTransactionnel.Models.Transfert;
+using SiteWebTransactionnel.Models.Vue;
+using SiteWebTransactionnel.Services;
 
 namespace SiteWebTransactionnel.Controllers;
 
@@ -15,7 +18,9 @@ public class ProduitsController(ProduitsService produitsService) : Controller
 		try
 		{
 			Produit produit = _produitsService.Récupérer(id);
-			return View("Details", produit);
+			ProduitDetailsVM produitDetailsVM = new(produit);
+
+			return View("Details", produitDetailsVM);
 		}
 		catch(KeyNotFoundException introuvable)
 		{
@@ -29,17 +34,17 @@ public class ProduitsController(ProduitsService produitsService) : Controller
 		try
 		{
 			Produit[] produits = _produitsService.RécupérerTout();
-			return View(produits);
+			List<ProduitListeVM> produitListeVMs = new();
+			foreach(Produit produit in produits)
+			{
+				produitListeVMs.Add(new ProduitListeVM(produit));
+			}
+			return View(produitListeVMs.ToArray());
 		}
 		catch(ArgumentNullException nullException)
 		{
 			Console.WriteLine(nullException);
 			return NotFound();
-		}
-		catch(Exception exception)
-		{
-			Console.WriteLine(exception);
-			return View(); // TODO Afficher l'erreur.
 		}
 	}
 
@@ -52,7 +57,7 @@ public class ProduitsController(ProduitsService produitsService) : Controller
 		{
 			return View("Creer");
 		}
-		catch(KeyNotFoundException introuvable)
+		catch(Exception introuvable)
 		{
 			return NotFound(introuvable);
 		}
@@ -74,7 +79,7 @@ public class ProduitsController(ProduitsService produitsService) : Controller
 		catch(Exception erreur)
 		{
 			Console.WriteLine(erreur);
-			return View(); // TODO Afficher l'erreur.
+			return View("Creer"); // TODO Afficher l'erreur.
 		}
 	}
 

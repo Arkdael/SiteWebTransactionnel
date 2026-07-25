@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
-using SiteWebTransactionnel.Controllers;
 using SiteWebTransactionnel.Data;
+using SiteWebTransactionnel.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,4 +1,6 @@
-@model Produit[]
+@using SiteWebTransactionnel.Models.Vue
+
+@model ProduitListeVM[]
 
 @{
 	ViewData["Title"] = "Liste";
@@ -26,9 +28,10 @@
 							<li><a class="dropdown-item" href="./Supprimer/@produit.Id">Delete</a></li>
 						</ul>
 					</div>
-					<a class="text-decoration-none" style="color: inherit" href=./Details/@produit.Id">
+					<a class="text-decoration-none" style="color: inherit" href="./Details/@produit.Id">
 						<div class="card-body d-flex flex-column">
-							<div style="background-color:gray; height:200px; lenght:200px;"></div>
+							<img src="@(produit.Images.Length > 0 ? produit.Images[0] : "")"/>
+
 								<h5 class="card-title">
 									@Html.DisplayFor(modelItem => produit.Nom)
 								</h5>
