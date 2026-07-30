@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+
+@inject RequestLocalizationOptions LocOptions
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -30,9 +35,26 @@
 							<a class="nav-link text-dark" asp-area="" asp-controller="Produits" asp-action="Liste">Produits</a>
 						</li>
 					</ul>
+					@{
+						IRequestCultureFeature? fonctionsCulture = Context.Features.Get<IRequestCultureFeature>();
+						CultureInfo cultureActuelle = fonctionsCulture?.RequestCulture.UICulture ?? new CultureInfo("fr-CA");
+						CultureInfo[] culturesSupportées = LocOptions.SupportedUICultures?.ToArray() ?? [];
+						string urlRetour = string.IsNullOrEmpty(Context.Request.Path) ? "/" : Context.Request.Path.Value!;
+					}
+					<div>
+						<form id="FormulaireLangue" asp-controller="Home" asp-action="ChangerLangue" method="POST" asp-route-urlRetour="@urlRetour">
+							<select name="culture" onchange="this.form.submit();">
+								@foreach(CultureInfo culture in culturesSupportées) 
+								{
+									<option value="@culture.Name" selected="@(cultureActuelle.Equals(culture))">@culture.NativeName</option>
+								}
+							</select>
+						</form>
+					</div>
 				</div>
 			</div>
 		</nav>
+
 	</header>
 	<div class="container">
 		<main role="main" class="pb-3">

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using SiteWebTransactionnel.Models;
 using SiteWebTransactionnel.Models.Transfert;
 using SiteWebTransactionnel.Models.Vue;
@@ -6,21 +7,22 @@ using SiteWebTransactionnel.Services;
 
 namespace SiteWebTransactionnel.Controllers;
 
-public class ProduitsController(ProduitsService produitsService) : Controller
+public class ProduitsController(ProduitsService produitsService, IStringLocalizer<ProduitsController> localizer) : Controller
 {
+	private readonly IStringLocalizer<ProduitsController> _localizer = localizer;
 	private readonly ProduitsService _produitsService = produitsService;
 
 	[Route("[controller]/[action]/{id:int}")]
-	[Route("[controller]/Détails/{id:int}")]
+	[Route("[controller]/Details/{id:int}")]
 	[HttpGet]
-	public IActionResult Details(int id)
+	public IActionResult Détails(int id)
 	{
 		try
 		{
 			Produit produit = _produitsService.Récupérer(id);
-			ProduitDetailsVM produitDetailsVM = new(produit);
+			ProduitDétailsVM produitDétailsVM = new(produit);
 
-			return View("Details", produitDetailsVM);
+			return View(produitDétailsVM);
 		}
 		catch(KeyNotFoundException introuvable)
 		{
@@ -55,7 +57,7 @@ public class ProduitsController(ProduitsService produitsService) : Controller
 	{
 		try
 		{
-			return View("Creer");
+			return View();
 		}
 		catch(Exception introuvable)
 		{
@@ -79,7 +81,7 @@ public class ProduitsController(ProduitsService produitsService) : Controller
 		catch(Exception erreur)
 		{
 			Console.WriteLine(erreur);
-			return View("Creer"); // TODO Afficher l'erreur.
+			return View(); // TODO Afficher l'erreur.
 		}
 	}
 

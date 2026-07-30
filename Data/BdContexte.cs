@@ -8,7 +8,7 @@ public class BdContexte(DbContextOptions<BdContexte> options) : DbContext(option
 	protected override void OnModelCreating(ModelBuilder builder)
 	{
 		base.OnModelCreating(builder);
-		builder.Entity<Produit>().HasData(Seed.SeedProduits);
+		builder.Entity<Produit>().HasData(Amorce.ProduitsInitiaux);
 	}
 
 	public DbSet<Produit> Produits { get; set; }

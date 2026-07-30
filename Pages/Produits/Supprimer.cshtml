@@ -1,39 +1,43 @@
-@model SiteWebTransactionnel.Models.Produit
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SiteWebTransactionnel.Localisation
 
+@model SiteWebTransactionnel.Models.Produit
+@inject IViewLocalizer Localisateur
+@inject IHtmlLocalizer<RessourcesCommunes> LocalisateurCommun
 @{
-    ViewData["Title"] = "Delete";
+	ViewData["Title"] = Localisateur["Titre"];
 }
 
-<h1>Delete</h1>
+<h1>@Localisateur["Titre"]</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>@Localisateur["Confirmation"]</h3>
 <div>
-    <h4>Produit</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Prix)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Prix)
-        </dd>
-    </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a href="/Produits/Liste">Back to List</a>
-    </form>
+	<h4>@LocalisateurCommun["ProduitNom"]</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Nom)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Nom)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Description)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Description)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Prix)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Prix)
+		</dd>
+	</dl>
+	
+	<form method="post">
+		<input type="hidden" asp-for="Id" />
+		<input type="submit" value="@Localisateur["ActionSupprimer"]" class="btn btn-danger" /> |
+		<a href="/Produits/Liste">@Localisateur["ActionRetour"]</a>
+	</form>
 </div>

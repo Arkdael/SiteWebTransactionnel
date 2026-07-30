@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using SiteWebTransactionnel.Models;
 
@@ -20,5 +21,17 @@ public class HomeController : Controller
 	public IActionResult Error()
 	{
 		return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+	}
+
+	[HttpPost]
+	public IActionResult ChangerLangue(string culture, string urlRetour)
+	{
+		Response.Cookies.Append(
+			CookieRequestCultureProvider.DefaultCookieName,
+			CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+			new CookieOptions { Expires = DateTimeOffset.UtcNow.AddDays(7) }
+		);
+
+		return LocalRedirect(urlRetour);
 	}
 }

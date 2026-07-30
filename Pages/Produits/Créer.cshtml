@@ -1,12 +1,17 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SiteWebTransactionnel.Localisation
+
 @model SiteWebTransactionnel.Models.Transfert.CréerProduit
+@inject IViewLocalizer Localisateur
+@inject IHtmlLocalizer<RessourcesCommunes> LocalisateurCommun
 
 @{
-	ViewData["Title"] = "Create";
+	ViewData["Title"] = Localisateur["Titre"];
 }
 		
-<h1>Create</h1>
+<h1>@Localisateur["Titre"]</h1>
 		
-<h4>Produit</h4>
+<h4>@LocalisateurCommun["ProduitNom"]</h4>
 <hr />
 <div class="row">
 	<div class="col-md-4">
@@ -28,11 +33,11 @@
 				<span asp-validation-for="Prix" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<input type="submit" value="Create" class="btn btn-primary" />
+				<input type="submit" value="@Localisateur["ActionCreer"]" class="btn btn-primary" />
 			</div>
 
 			<div class="form-group">
-				<label for="Photos">Photos: </label>
+				<label asp-for="Photos" class="control-label"></label>
 				<input id="Photos" name="Photos" type="file" accept="image/*" class="form-control-file"/>
 				<span asp-validation-for="Photos" class="text-danger"></span>
 			</div>
@@ -42,7 +47,7 @@
 </div>
 
 <div>
-	<a href="/Produits/Liste">Back to List</a>
+	<a href="/Produits/Liste">@Localisateur["ActionRetour"]</a>
 </div>
 
 @section Scripts {

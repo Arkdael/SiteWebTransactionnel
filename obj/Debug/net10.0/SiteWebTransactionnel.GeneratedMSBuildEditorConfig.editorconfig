@@ -39,12 +39,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/SiteWebTransactionnel/Pages/Produits/Creer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvQ3JlZXIuY3NodG1s
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Créer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvQ3LDqWVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/felix/SiteWebTransactionnel/Pages/Produits/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvRGV0YWlscy5jc2h0bWw=
+[/home/felix/SiteWebTransactionnel/Pages/Produits/Détails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVpdHMvRMOpdGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/felix/SiteWebTransactionnel/Pages/Produits/Liste.cshtml]
@@ -78,3 +78,91 @@ build_metadata.AdditionalFiles.CssScope =
 [/home/felix/SiteWebTransactionnel/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-j7myzc875k
+
+[/home/felix/SiteWebTransactionnel/Ressources/Controllers/ProduitsController.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Controllers/ProduitsController.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Controllers/ProduitsController.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Controllers/ProduitsController.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Localisation.RessourcesCommunes.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Localisation.RessourcesCommunes.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Localisation.RessourcesCommunes.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Localisation.RessourcesCommunes.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Models/Transfert/CréerProduit.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Models/Transfert/CréerProduit.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Models/Transfert/CréerProduit.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Models/Transfert/CréerProduit.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Models/Vue/ProduitDétailsVM.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Models/Vue/ProduitDétailsVM.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Models/Vue/ProduitDétailsVM.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Models/Vue/ProduitDétailsVM.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Models/Vue/ProduitListeVM.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Models/Vue/ProduitListeVM.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Models/Vue/ProduitListeVM.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Models/Vue/ProduitListeVM.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Home/Index.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Home/Index.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Home/Index.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Home/Index.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Créer.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Créer.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Créer.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Créer.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Détails.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Détails.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Détails.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Détails.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Liste.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Liste.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Liste.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Liste.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Modifier.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Modifier.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Modifier.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Modifier.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Supprimer.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Supprimer.en.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/felix/SiteWebTransactionnel/Ressources/Pages/Produits/Supprimer.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Ressources/Pages/Produits/Supprimer.fr.resx
+build_metadata.AdditionalFiles.CssScope = 

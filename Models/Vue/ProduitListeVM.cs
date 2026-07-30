@@ -1,14 +1,25 @@
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 
 namespace SiteWebTransactionnel.Models.Vue;
 
 public class ProduitListeVM
 {
+	[Display(Name="ChampId")]
 	public int Id { get; set; }
+
+	[Display(Name="ChampNom")]
 	public required string Nom { get; set; }
+
+	[Display(Name="ChampDescription")]
 	public string Description { get; set; } = "";
+
+	[Display(Name="ChampPrix")]
 	public decimal Prix { get; set; }
+
+	[Display(Name="ChampImages")]
 	public string[] Images { get; set; } = []; // Images représentées en string.
+	
 	public ProduitListeVM() {}
 
 	[SetsRequiredMembers]

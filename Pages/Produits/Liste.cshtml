@@ -1,15 +1,17 @@
+@using Microsoft.AspNetCore.Mvc.Localization
 @using SiteWebTransactionnel.Models.Vue
 
 @model ProduitListeVM[]
+@inject IViewLocalizer Localisateur
 
 @{
-	ViewData["Title"] = "Liste";
+	ViewData["Title"] = Localisateur["Titre"];
 }
 
-<h1>Index</h1>
+<h1>@Localisateur["Titre"]</h1>
 
 <p>
-	<a href="/Produits/Creer" class="btn btn-primary">Create New</a>
+	<a href="/Produits/Creer" class="btn btn-primary">@Localisateur["ActionCreer"]</a>
 </p>
 
 <div class="container">
@@ -24,8 +26,8 @@
 							⚙
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink-@produit.Id">
-							<li><a class="dropdown-item" href="./Modifier/@produit.Id">Edit</a></li>
-							<li><a class="dropdown-item" href="./Supprimer/@produit.Id">Delete</a></li>
+							<li><a class="dropdown-item" href="./Modifier/@produit.Id">@Localisateur["ActionModifier"]</a></li>
+							<li><a class="dropdown-item" href="./Supprimer/@produit.Id">@Localisateur["ActionSupprimer"]</a></li>
 						</ul>
 					</div>
 					<a class="text-decoration-none" style="color: inherit" href="./Details/@produit.Id">

@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 using SiteWebTransactionnel.Models.Transfert;
 
@@ -27,7 +26,7 @@ public class Produit
 	}
 
 	[SetsRequiredMembers]
-	public Produit(Transfert.CréerProduit créerProduit)
+	public Produit(CréerProduit créerProduit)
 	{
 		Nom = créerProduit.Nom;
 		Description = créerProduit.Description;

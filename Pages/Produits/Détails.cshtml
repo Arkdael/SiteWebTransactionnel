@@ -1,14 +1,19 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using SiteWebTransactionnel.Localisation
 @using SiteWebTransactionnel.Models.Vue
 
-@model ProduitDetailsVM
+@model ProduitDétailsVM
+@inject IViewLocalizer Localisateur
+@inject IHtmlLocalizer<RessourcesCommunes> LocalisateurCommun
+
 @{
-	ViewData["Title"] = "Details";
+	ViewData["Title"] = Localisateur["Titre"];
 }
 
-<h1>Details</h1>
+<h1>@Localisateur["Titre"]</h1>
 
 <div>
-	<h4>Produit</h4>
+	<h4>@LocalisateurCommun["ProduitNom"]</h4>
 	<hr />
 	<img src="@(Model.Images.Count() > 0 ? Model.Images.First() : "")"/>
 	<dl class="row">							
@@ -33,6 +38,6 @@
 	</dl>
 </div>
 <div>
-	<a href="/Produits/Modifier/@Model.Id">Edit</a> |
-	<a href="/Produits/Liste">Back to List</a>
+	<a href="/Produits/Modifier/@Model.Id">@Localisateur["ActionModifier"]</a> |
+	<a href="/Produits/Liste">@Localisateur["ActionRetour"]</a>
 </div>
